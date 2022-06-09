@@ -129,4 +129,3 @@ C:\Users\ThameeraTharmakulasi\source\repos\ApiTesting2\ApiTesting2\obj\Debug\net
 C:\Users\ThameeraTharmakulasi\source\repos\ApiTesting2\ApiTesting2\obj\Debug\net5.0\ref\ApiTesting2.dll
 C:\Users\ThameeraTharmakulasi\source\repos\ApiTesting2\ApiTesting2\obj\Debug\net5.0\ApiTesting2.pdb
 C:\Users\ThameeraTharmakulasi\source\repos\ApiTesting2\ApiTesting2\obj\Debug\net5.0\ApiTesting2.genruntimeconfig.cache
-C:\Users\ThameeraTharmakulasi\source\repos\ApiTesting2\ApiTesting2\obj\Debug\net5.0\ApiTesting2.csproj.AssemblyReference.cache

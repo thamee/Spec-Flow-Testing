@@ -99,12 +99,10 @@ testRunner.When("Create admin api is called", ((string)(null)), ((TechTalk.SpecF
         [Xunit.TraitAttribute("FeatureTitle", "Employees")]
         [Xunit.TraitAttribute("Description", "Get list of Employees")]
         [Xunit.TraitAttribute("Category", "employee")]
-        [Xunit.TraitAttribute("Category", "messured")]
         public virtual void GetListOfEmployees()
         {
             string[] tagsOfScenario = new string[] {
-                    "employee",
-                    "messured"};
+                    "employee"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get list of Employees", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 12
@@ -144,12 +142,10 @@ this.FeatureBackground();
         [Xunit.TraitAttribute("FeatureTitle", "Employees")]
         [Xunit.TraitAttribute("Description", "Add Employees")]
         [Xunit.TraitAttribute("Category", "employee")]
-        [Xunit.TraitAttribute("Category", "messured")]
         public virtual void AddEmployees()
         {
             string[] tagsOfScenario = new string[] {
-                    "employee",
-                    "messured"};
+                    "employee"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Employees", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 17
@@ -188,26 +184,15 @@ this.FeatureBackground();
             this.ScenarioCleanup();
         }
         
-        [Xunit.SkippableTheoryAttribute(DisplayName="Get Employee By Id")]
+        [Xunit.SkippableFactAttribute(DisplayName="Get Employee By Id")]
         [Xunit.TraitAttribute("FeatureTitle", "Employees")]
         [Xunit.TraitAttribute("Description", "Get Employee By Id")]
         [Xunit.TraitAttribute("Category", "employee")]
-        [Xunit.TraitAttribute("Category", "messured")]
-        [Xunit.InlineDataAttribute("44", new string[0])]
-        [Xunit.InlineDataAttribute("899999", new string[0])]
-        [Xunit.InlineDataAttribute("49945", new string[0])]
-        public virtual void GetEmployeeById(string id, string[] exampleTags)
+        public virtual void GetEmployeeById()
         {
-            string[] @__tags = new string[] {
-                    "employee",
-                    "messured"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            string[] tagsOfScenario = @__tags;
+            string[] tagsOfScenario = new string[] {
+                    "employee"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("id", id);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get Employee By Id", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 23
 this.ScenarioInitialize(scenarioInfo);
@@ -233,7 +218,7 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line hidden
 #line 24
- testRunner.When(string.Format("Get Employee By Id api is called({0})", id), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("Get Employee By Id api is called", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 25
  testRunner.Then("Status code should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -242,28 +227,17 @@ this.FeatureBackground();
             this.ScenarioCleanup();
         }
         
-        [Xunit.SkippableTheoryAttribute(DisplayName="Delete Employees")]
+        [Xunit.SkippableFactAttribute(DisplayName="Delete Employees")]
         [Xunit.TraitAttribute("FeatureTitle", "Employees")]
         [Xunit.TraitAttribute("Description", "Delete Employees")]
         [Xunit.TraitAttribute("Category", "employee")]
-        [Xunit.TraitAttribute("Category", "messured")]
-        [Xunit.InlineDataAttribute("44", new string[0])]
-        [Xunit.InlineDataAttribute("899999", new string[0])]
-        [Xunit.InlineDataAttribute("49945", new string[0])]
-        public virtual void DeleteEmployees(string id, string[] exampleTags)
+        public virtual void DeleteEmployees()
         {
-            string[] @__tags = new string[] {
-                    "employee",
-                    "messured"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            string[] tagsOfScenario = @__tags;
+            string[] tagsOfScenario = new string[] {
+                    "employee"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("id", id);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete Employees", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 34
+#line 29
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -286,45 +260,33 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
 this.FeatureBackground();
 #line hidden
-#line 36
+#line 30
  testRunner.Given("ModelState is correct", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 37
- testRunner.When(string.Format("Delete  Employee  api is called({0})", id), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 31
+ testRunner.When("Delete  Employee  api is called", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 38
+#line 32
  testRunner.Then("Status code should be 201", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 33
+ testRunner.And("Response should not have Eror", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
-        [Xunit.SkippableTheoryAttribute(DisplayName="Update Employee")]
+        [Xunit.SkippableFactAttribute(DisplayName="Update Employee")]
         [Xunit.TraitAttribute("FeatureTitle", "Employees")]
         [Xunit.TraitAttribute("Description", "Update Employee")]
         [Xunit.TraitAttribute("Category", "employee")]
-        [Xunit.TraitAttribute("Category", "messured")]
-        [Xunit.InlineDataAttribute("44", "Thameera", "200000", "23", "", new string[0])]
-        [Xunit.InlineDataAttribute("899999", "Hansima", "30000", "34", "", new string[0])]
-        [Xunit.InlineDataAttribute("49945", "Geetha", "90000", "23", "", new string[0])]
-        public virtual void UpdateEmployee(string id, string employee_Name, string employee_Salary, string employee_Age, string profile_Image, string[] exampleTags)
+        public virtual void UpdateEmployee()
         {
-            string[] @__tags = new string[] {
-                    "employee",
-                    "messured"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            string[] tagsOfScenario = @__tags;
+            string[] tagsOfScenario = new string[] {
+                    "employee"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("id", id);
-            argumentsOfScenario.Add("employee_name", employee_Name);
-            argumentsOfScenario.Add("employee_salary", employee_Salary);
-            argumentsOfScenario.Add("employee_age", employee_Age);
-            argumentsOfScenario.Add("profile_image", profile_Image);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update Employee", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 46
+#line 37
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -347,16 +309,16 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
 this.FeatureBackground();
 #line hidden
-#line 47
+#line 38
  testRunner.Given("ModelState is correct", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 48
- testRunner.When(string.Format("Update  Employee list api is called({0},{1},{2},{3},{4})", id, employee_Name, employee_Salary, employee_Age, profile_Image), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 39
+ testRunner.When("Update  Employee list api is called", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 49
+#line 40
  testRunner.Then("Status code should be 201", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 50
+#line 41
  testRunner.And("Response should not have Eror", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }

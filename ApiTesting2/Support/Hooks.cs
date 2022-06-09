@@ -42,7 +42,7 @@ namespace ApiTesting2.Support
                 stopwatch.Stop();
                 var responseTime = stopwatch.Elapsed.TotalMilliseconds;
                 context.Add(Constants.RESPONSE_TIME_KEY, responseTime);
-                //responseTime.Should().BeLessThan(settings.AppSettings.MinimumResponseTime);
+                responseTime.Should().BeLessThan(settings.AppSettings.MinimumResponseTime);
                 stopwatch.Reset();
             }
         }
